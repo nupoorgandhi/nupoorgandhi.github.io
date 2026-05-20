@@ -11,22 +11,38 @@
       body { font-family: Helvetica, Arial, sans-serif; color: Gray; margin: 0; }
       /* Left-align content: remove centered column */
       .container { padding: 30px; max-width: none; margin: 0; }
-      h1 { color: rgb(171, 180, 209); margin: 0; }
-      .header { display: flex; align-items: flex-start; gap: 20px; }
+      h1 { color: rgb(171, 180, 209); margin: 0 0 0.6em 0; font-size: 2.2em; }
+      .header { display: flex; align-items: flex-start; gap: 20px; justify-content: space-between; }
+      .header > div { display: flex; flex-direction: column; }
+      .left-col { flex: 1 1 auto; max-width: calc(100% - 260px); }
+      .pronouns { font-size: 0.7em; color: #9a9a9a; margin-left: 2px; font-weight: 300; vertical-align: baseline; }
+      .hdr { margin-top: 6px; font-size: 1em; color: Gray; display: flex; align-items: center; }
+      .hdr a { color: Gray; margin: 0 4px; text-decoration: none; }
+      .hdr .sep { display: inline-block; width: 2px; height: 1.25em; background: Gray; margin: 0 6px; border-radius: 1px; }
+      .right-col { width: 220px; display: flex; flex-direction: column; align-items: center; }
       .photo { width: 199px; height: 186px; float: right; margin-left: 30px; margin-bottom: 10px; }
-      .intro { line-height: 1.3; text-align: justify; }
-      .contact { margin-top: 10px; }
+      .intro { line-height: 1.3; text-align: justify; margin: 0 0 0.8em 0; }
+      /* contact/links under the name */
+      .contact { margin-top: 8px; margin-bottom: 6px; }
       .links a { color: Gray; margin-right: 8px; text-decoration: none; }
       a { color: Gray; }
       .pub-section { clear: both; margin-top: 30px; }
       .pub { margin-bottom: 0.8em; }
+      /* Titles for publications that don't have links */
+      .pub-title { text-decoration: underline; font-family: Helvetica-Light; }
       .light { font-family: Helvetica-Light; }
+
+      /* Make the numbered list spacing match paragraph spacing */
+      ol { margin-top: 0.2em; }
+      ol li { margin-bottom: 0.4em; line-height: 1.15; }
     </style>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <h1>Nupoor Gandhi</h1>
+        <div class="left-col">
+          <h1>Nupoor Gandhi <span class="pronouns light">(she/her)</span></h1>
+        </div>
       </header>
 
       <main>
@@ -51,44 +67,42 @@
           To do this, I develop methods for efficiently structuring text under realistic resource constraints in settings that combine human expertise and language models.
         </p>
 
-        <p class="intro"><strong>My research spans:</strong></p>
+        <p class="intro">More broadly, my research spans:</p>
         <ol>
           <li>Structured representation as a more efficient way of doing document research.</li>
           <li>Addressing failures to meet real-world complex information extraction needs.</li>
           <li>The capacity of decomposition to reduce the cost of high quality annotation projects.</li>
         </ol>
 
-        <p class="contact">Contact: nmgandhi(at)cs.cmu.edu</p>
+        
 
-        <p class="links">
-          <a href="https://scholar.google.com/citations?user=AfWWFA8AAAAJ&hl=en">Google Scholar</a>
-          <a href="https://nupoorgandhi.github.io/resume_research.pdf" target="_blank">| CV</a>
-        </p>
+        <p class="hdr">Contact: nmgandhi(at)cs.cmu.edu <span class="sep" aria-hidden="true"></span> <a href="https://scholar.google.com/citations?user=AfWWFA8AAAAJ&hl=en">Google Scholar</a> <span class="sep" aria-hidden="true"></span> <a href="https://nupoorgandhi.github.io/resume_research.pdf" target="_blank">CV</a></p>
 
         <section class="pub-section">
           <h2 style="color:rgb(171, 180, 209); margin-top: 30px;">Peer-Reviewed Publications</h2>
 
-          <p class="pub">Nupoor Gandhi, Emma Strubell, Task Decomposition for Efficient Annotation, Computational Linguistics 2026 (Under Review).</p>
 
-          <p class="pub"><a class="light" href="https://openreview.net/forum?id=afyrC4Bxb8#discussion">Decomposing Unitization and Typing for Efficient and Consistent Span-Bound Concept Annotation</a>. Nupoor Gandhi, Michael Bada, Emma Strubell. Findings of ACL 2026.</p>
+          <p class="pub"><span class="pub-title">Task Decomposition for Efficient Annotation</span>. <strong>Nupoor Gandhi</strong>, Emma Strubell. Computational Linguistics 2026 (Under Review).</p>
 
-          <p class="pub"><a class="light" href="https://aclanthology.org/2025.emnlp-demos.35/">SynthTextEval: Synthetic Text Data Generation and Evaluation for High-Stakes Domains</a>. Krithika Ramesh, Daniel Smolyak, Zihao Zhao, Nupoor Gandhi, Ritu Agarwal, Margrét Bjarnadóttir, Anjalie Field. Proceedings of EMNLP 2025 - Demo.</p>
+          <p class="pub"><a class="light" href="https://openreview.net/forum?id=afyrC4Bxb8#discussion">Decomposing Unitization and Typing for Efficient and Consistent Span-Bound Concept Annotation</a>. <strong>Nupoor Gandhi</strong>, Michael Bada, Emma Strubell. Findings of ACL 2026.</p>
 
-          <p class="pub"><a class="light" href="https://aclanthology.org/2025.findings-acl.244/">Beyond Text: Characterizing Domain Expert Needs in Document Research</a>. Sireesh Gururaja, Nupoor Gandhi, Jeremiah Milbauer, Emma Strubell. Findings of ACL 2025.</p>
+          <p class="pub"><a class="light" href="https://aclanthology.org/2025.emnlp-demos.35/">SynthTextEval: Synthetic Text Data Generation and Evaluation for High-Stakes Domains</a>. Krithika Ramesh, Daniel Smolyak, Zihao Zhao, <strong>Nupoor Gandhi</strong>, Ritu Agarwal, Margrét Bjarnadóttir, Anjalie Field. Proceedings of EMNLP 2025 - Demo.</p>
 
-          <p class="pub"><a class="light" href="https://aclanthology.org/2024.findings-emnlp.894/">Evaluating Differentially Private Synthetic Data Generation in High-Stakes Domains</a>. Krithika Ramesh, Nupoor Gandhi, Pulkit Madaan, Lisa Bauer, Charith Peris, Anjalie Field. Findings of EMNLP 2024.</p>
+          <p class="pub"><a class="light" href="https://aclanthology.org/2025.findings-acl.244/">Beyond Text: Characterizing Domain Expert Needs in Document Research</a>. Sireesh Gururaja, <strong>Nupoor Gandhi</strong>, Jeremiah Milbauer, Emma Strubell. Findings of ACL 2025.</p>
 
-          <p class="pub"><a class="light" href="https://aclanthology.org/2024.climatenlp-1.12/">Challenges in End-to-End Policy Extraction from Climate Action Plans</a>. Nupoor Gandhi, Tom Corringham, Emma Strubell. Proceedings of ClimateNLP Workshop at ACL 2024.</p>
+          <p class="pub"><a class="light" href="https://aclanthology.org/2024.findings-emnlp.894/">Evaluating Differentially Private Synthetic Data Generation in High-Stakes Domains</a>. Krithika Ramesh, <strong>Nupoor Gandhi</strong>, Pulkit Madaan, Lisa Bauer, Charith Peris, Anjalie Field. Findings of EMNLP 2024.</p>
 
-          <p class="pub"><a class="light" href="https://aclanthology.org/2023.acl-long.588/">Annotating Mentions Alone Enables Efficient Domain Adaptation for Coreference Resolution</a>. Nupoor Gandhi, Anjalie Field, Emma Strubell. Proceedings of ACL 2023.</p>
+          <p class="pub"><a class="light" href="https://aclanthology.org/2024.climatenlp-1.12/">Challenges in End-to-End Policy Extraction from Climate Action Plans</a>. <strong>Nupoor Gandhi</strong>, Tom Corringham, Emma Strubell. Proceedings of ClimateNLP Workshop at ACL 2024.</p>
 
-          <p class="pub"><a class="light" href="https://dl.acm.org/doi/abs/10.1145/3593013.3594094">Examining risks of racial biases in NLP tools for child protective services</a>. Anjalie Field, Amanda Coston, Nupoor Gandhi, Alexandra Chouldechova, Emily Putnam-Hornstein, David Steier and Yulia Tsvetkov. Proceedings of ACM FAccT 2023.</p>
+          <p class="pub"><a class="light" href="https://aclanthology.org/2023.acl-long.588/">Annotating Mentions Alone Enables Efficient Domain Adaptation for Coreference Resolution</a>. <strong>Nupoor Gandhi</strong>, Anjalie Field, Emma Strubell. Proceedings of ACL 2023. (Selected for Oral Presentation)</p>
 
-          <p class="pub"><a class="light" href="https://aclanthology.org/2021.crac-1.13/">Improving Span Representation for Domain-adapted Coreference Resolution</a>. Nupoor Gandhi, Anjalie Field, Yulia Tsvetkov. Proceedings of EMNLP 2021 Workshop on Computational Models of Reference, Anaphora and Coreference.</p>
+          <p class="pub"><a class="light" href="https://dl.acm.org/doi/abs/10.1145/3593013.3594094">Examining risks of racial biases in NLP tools for child protective services</a>. Anjalie Field, Amanda Coston, <strong>Nupoor Gandhi</strong>, Alexandra Chouldechova, Emily Putnam-Hornstein, David Steier and Yulia Tsvetkov. Proceedings of ACM FAccT 2023.</p>
 
-          <p class="pub"><a class="light" href="https://ojs.aaai.org//index.php/AAAI/article/view/7165">Predicting Opioid Overdose Crude Rates with Text-Based Twitter Features (Student Abstract)</a>. Nupoor Gandhi, Alex Morales, Sally Man-Pui Chan, Dolores Albarracin, and ChengXiang Zhai. Proceedings of the AAAI 2020.</p>
+          <p class="pub"><a class="light" href="https://aclanthology.org/2021.crac-1.13/">Improving Span Representation for Domain-adapted Coreference Resolution</a>. <strong>Nupoor Gandhi</strong>, Anjalie Field, Yulia Tsvetkov. Proceedings of EMNLP 2021 Workshop on Computational Models of Reference, Anaphora and Coreference.</p>
 
-          <p class="pub"><a class="light" href="https://ieeexplore.ieee.org/document/8622347/">Multi-Attribute Topic Feature Construction for Social Media-based Prediction</a>. Alex Morales, Nupoor Gandhi, Man-pui Sally Chan, Sophie Lohmann, Travis Sanchez, Kathleen A. Brady, Lyle Ungar, Dolores Albarracín, and ChengXiang Zhai. Proceedings of IEEE Big Data 2018.</p>
+          <p class="pub"><a class="light" href="https://ojs.aaai.org//index.php/AAAI/article/view/7165">Predicting Opioid Overdose Crude Rates with Text-Based Twitter Features (Student Abstract)</a>. <strong>Nupoor Gandhi</strong>, Alex Morales, Sally Man-Pui Chan, Dolores Albarracin, and ChengXiang Zhai. Proceedings of the AAAI 2020.</p>
+
+          <p class="pub"><a class="light" href="https://ieeexplore.ieee.org/document/8622347/">Multi-Attribute Topic Feature Construction for Social Media-based Prediction</a>. Alex Morales, <strong>Nupoor Gandhi</strong>, Man-pui Sally Chan, Sophie Lohmann, Travis Sanchez, Kathleen A. Brady, Lyle Ungar, Dolores Albarracín, and ChengXiang Zhai. Proceedings of IEEE Big Data 2018.</p>
 
         </section>
       </main>
